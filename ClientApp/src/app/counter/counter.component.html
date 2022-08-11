@@ -1,0 +1,40 @@
+<style type="text/css">
+  tr.head {
+    font-weight: bold;
+    background-color: #6290ca;
+    text-transform: uppercase;
+  }
+
+  tr td {
+    border: 1px solid #000;
+    padding: 5px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #e4e4e4;
+  }
+
+  tr td:nth-child(1) {
+    font-weight: bold;
+  }
+</style>
+
+<h1>Counter</h1>
+
+<p>Welcome to Chirpus Pizza!</p>
+
+<table>
+  <tbody>
+    <tr class="head">
+      <td>Item Name</td>
+      <td>Category</td>
+      <td>Price</td>
+    </tr>
+    <tr *ngFor="let currItem of theMenuItems">
+      <td>{{ currItem.ItemName }}</td>
+      <td>{{ currItem.Category }}</td>
+      <td>{{ currItem.Price | currency }}</td>
+    </tr>
+  </tbody>
+
+</table>
